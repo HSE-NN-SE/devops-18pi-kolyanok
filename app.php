@@ -1,0 +1,41 @@
+<?
+require_once "OffensiveAnalytics.php";
+
+$oa = new OffensiveAnalytics();
+echo "Enter lines of text: ";
+while (FALSE !== ($line = fgets(STDIN))) 
+{
+   $off = $oa->getOffensive($line);
+   echo "Пизда и производные (".count($off[0]).")";
+   if(count($off[0]))
+   {
+     echo ": \n";
+     foreach ($off[0] as $mat)
+	   echo $mat."\n";
+   }
+   else echo "\n";
+   echo "Хуй и производные (".count($off[1]).")";
+   if(count($off[1]))
+   {
+     echo ": \n";
+     foreach ($off[1] as $mat)
+	   echo $mat."\n";
+   }
+   else echo "\n";
+   echo "Ебать и производные (".count($off[2]).")";
+   if(count($off[2]))
+   {
+     echo ": \n";
+     foreach ($off[2] as $mat)
+	   echo $mat."\n";
+   }
+   else echo "\n";
+   echo "Блядь и производные (".count($off[3]).")";
+   if(count($off[3]))
+   {
+     echo ": \n";
+     foreach ($off[3] as $mat)
+	   echo $mat."\n";
+   }
+   else echo "\n";
+}
