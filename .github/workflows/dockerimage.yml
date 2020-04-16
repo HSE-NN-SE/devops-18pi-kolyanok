@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag OffensiveAnalytics:$
+      run: docker build . --file Dockerfile --tag offensiveanalytics:$
       
   test:
     
@@ -25,6 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run image
-        run: docker run OffensiveAnalytics:$
+        run: docker run offensiveanalytics:$
       - name: Run tests
-        run: docker exec -it OffensiveAnalytics:$ sh tests/runtests.sh
+        run: docker exec -it offensiveanalytics:$ sh tests/runtests.sh
