@@ -3,23 +3,26 @@
 /** 
  * Сlass for the analysis of offensive vocabulary in Russian
  *
- * @package OffensiveAnalytics
- * @author  kolyanok <nikolayokunkov@gmail.com>
- * @license WTFPL - http://www.wtfpl.net/txt/copying/
- * @link    https://kolynaok.ru/matan
  * @category OffensiveAnalytics
+ * @package  OffensiveAnalytics
+ * @author   kolyanok <nikolayokunkov@gmail.com>
+ * @license  WTFPL - http://www.wtfpl.net/txt/copying/
+ * @link     https://kolynaok.ru/matan
  */
+
+
+declare(strict_types=1);
 
 /**
  * OffensiveAnalytics class
  * Сlass for the analysis of offensive vocabulary in Russian
  *
- * @package kolyanok/OffensiveAnalytics
- * @link    https://kolynaok.ru/matan
+ * @category OffensiveAnalytics
+ * @package  OffensiveAnalytics
+ * @author   kolyanok <nikolayokunkov@gmail.com>
+ * @license  WTFPL - http://www.wtfpl.net/txt/copying/
+ * @link     https://kolynaok.ru/matan
  */
-declare(strict_types=1);
-
-
 class OffensiveAnalytics
 {
     const P = 'пПnPp';
@@ -63,7 +66,14 @@ class OffensiveAnalytics
     'помога', 'памага', 'гов', 'огонь', 'o1b2', 'ведро', 'догон', 'хулио', 'хульст', 'хульс', 'углубл'
     ];
 
-    public static function getOffensive(string $text, string $replace = "*") : array
+    /**
+     * Function getOffensive
+     *
+     * @param string $text input text
+     *
+     * @return array of Offensive Words
+     **/
+    public static function getOffensive(string $text) : array
     {
         
                 preg_match_all(
