@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build-test:
+  build-test-upload:
 
     runs-on: ubuntu-latest
 
@@ -21,7 +21,12 @@ jobs:
     - name: Run tests
       run: docker run offensiveanalyticstests
     - name: Build release
-      run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
+      run: docker build . --file Dockerfile.app -t offensiveanalyticsapp:v$GITHUB_RUN_NUMBER
+    - name: push to DockerHub
+      run: |
+        docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
+        docker push kolyanok/offensiveanalyticsapp:v$GITHUB_RUN_NUMBER
+      
       
   cscheck:
     runs-on: ubuntu-latest
