@@ -19,5 +19,5 @@ jobs:
     - name: Run image
       run: docker run offensiveanalytics:latest
     - name: Run tests
-      run: docker exec -it offensiveanalytics:$ sh tests/runtests.sh
+      run: docker exec -it offensiveanalytics:$ cd tests && sh runtests.sh
       
