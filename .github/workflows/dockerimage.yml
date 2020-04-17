@@ -21,9 +21,9 @@ jobs:
     - name: Run tests
       run: docker run offensiveanalyticstests
     - name: Code Style check
-      uses: chindit/actions-phpcs@1.0.1
+      uses: chindit/actions-phpcs@master
       with:
-        dir: src/
+        dir: src
     - name: Build release
       run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
       
