@@ -23,7 +23,7 @@ jobs:
     - name: Code Style check
       uses: chindit/actions-phpcs@1.0.1
       with:
-        dir: src
+        dir: src/
     - name: Build release
       run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
       
