@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag offensiveanalytics:latest
-    - name: Run image
-      run: docker run offensiveanalytics:latest
+    - name: Build tests
+      run: docker build . --file Dockerfile.tests -t offensiveanalyticstests
     - name: Run tests
-      run: docker exec -it offensiveanalytics:latest cd tests && sh runtests.sh
+      run: docker run offensiveanalyticstests
+    - name: Build app
+      run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
       
