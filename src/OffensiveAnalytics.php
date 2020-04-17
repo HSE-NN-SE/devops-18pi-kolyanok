@@ -1,12 +1,12 @@
 <?php
 
-/** Сlass for the analysis of offensive vocabulary in Russian
+/** 
+ * Сlass for the analysis of offensive vocabulary in Russian
  * @OffensiveAnalytics.php
- * OffensiveAnalytics class
- * @author    kolyanok <nikolayokunkov@gmail.com>
- * @package kolyanok/OffensiveAnalytics
- * @license WTFPL
- * @link https://kolynaok.ru/matan
+ * @package                kolyanok/OffensiveAnalytics
+ * @author                 kolyanok <nikolayokunkov@gmail.com>
+ * @license                WTFPL - http://www.wtfpl.net/txt/copying/
+ * @link                   https://kolynaok.ru/matan
  */
 
 /**
@@ -120,7 +120,7 @@ class OffensiveAnalytics
         
             $m[$n]=$mat[$n][1];
             $c = count($m[$n]);
-            for($i = 0; $i < $c; $i++) {
+            for ($i = 0; $i < $c; $i++) {
                   $word = mb_strtolower($m[$n][$i]);
                 foreach (self::EXCEPTIONS as $exception) {
                     if (mb_strpos($word, $exception) !== false) {

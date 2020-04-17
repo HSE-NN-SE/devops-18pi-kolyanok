@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * A small program for demonstrating the work the OffensiveAnalytics class
  * @app.php
  * OffensiveAnalytics app
  * @author    kolyanok <nikolayokunkov@gmail.com>
@@ -9,9 +10,6 @@
  * @link https://kolynaok.ru/matan
  */
 
-/**
- * A small program for demonstrating the work the OffensiveAnalytics class
- */
 require_once "OffensiveAnalytics.php";
 
 $oa = new OffensiveAnalytics();
