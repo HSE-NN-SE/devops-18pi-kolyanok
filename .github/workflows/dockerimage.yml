@@ -24,7 +24,7 @@ jobs:
       run: docker build . --file Dockerfile.app -t offensiveanalyticsapp:v$GITHUB_RUN_NUMBER
     - name: push to DockerHub
       run: |
-        docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
         docker push kolyanok/offensiveanalyticsapp:v$GITHUB_RUN_NUMBER
       
       
