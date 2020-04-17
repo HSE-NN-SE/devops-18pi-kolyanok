@@ -20,6 +20,6 @@ jobs:
       run: docker build . --file Dockerfile.tests -t offensiveanalyticstests
     - name: Run tests
       run: docker run offensiveanalyticstests
-    - name: Build app
+    - name: Build release
       run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
       
