@@ -5,8 +5,9 @@
  *
  * @package OffensiveAnalytics
  * @author  kolyanok <nikolayokunkov@gmail.com>
- * @link    https://kolynaok.ru/matan
  * @license WTFPL - http://www.wtfpl.net/txt/copying/
+ * @link    https://kolynaok.ru/matan
+ * @category OffensiveAnalytics
  */
 
 /**

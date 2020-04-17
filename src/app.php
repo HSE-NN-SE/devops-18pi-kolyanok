@@ -7,6 +7,7 @@
  * @author  kolyanok <nikolayokunkov@gmail.com>
  * @license WTFPL - http://www.wtfpl.net/txt/copying/
  * @link    https://kolynaok.ru/matan
+ * @category OffensiveAnalytics
  */
 
 require_once "OffensiveAnalytics.php";
