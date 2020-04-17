@@ -20,10 +20,15 @@ jobs:
       run: docker build . --file Dockerfile.tests -t offensiveanalyticstests
     - name: Run tests
       run: docker run offensiveanalyticstests
+    - name: Build release
+      run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
+      
+  cscheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
     - name: Code Style check
       uses: chindit/actions-phpcs@master
       with:
         dir: src
-    - name: Build release
-      run: docker build . --file Dockerfile.app -t offensiveanalyticsapp
-      
