@@ -1,10 +1,18 @@
 <?php
+
+/**
+ * @app.php
+ * OffensiveAnalytics app
+ */
+
+/**
+ * A small program for demonstrating the work the OffensiveAnalytics class
+ */
 require_once "OffensiveAnalytics.php";
 
 $oa = new OffensiveAnalytics();
 echo "Enter lines of text: ";
-while (false !== ($line = fgets(STDIN))) 
-{
+while (false !== ($line = fgets(STDIN))) {
     $off = $oa->getOffensive($line);
     echo "Пизда и производные (".count($off[0]).")";
     if(count($off[0])) {

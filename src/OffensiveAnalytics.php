@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @OffensiveAnalytics.php
+ * OffensiveAnalytics class
+ */
+
+/**
+ * Сlass for the analysis of offensive vocabulary in Russian
+ */
 declare(strict_types=1);
 
 
@@ -101,12 +109,11 @@ class OffensiveAnalytics
 		/xu', $text, $mat[3]
         );                                 
       
-        for($n = 0; $n < count($mat); $n++)
-        {
+        for($n = 0; $n < count($mat); $n++) {
         
             $m[$n]=$mat[$n][1];
             $c = count($m[$n]);
-            for($i = 0; $i < $c; $i++){
+            for($i = 0; $i < $c; $i++) {
                   $word = mb_strtolower($m[$n][$i]);
                 foreach(self::EXCEPTIONS as $exception){
                     if(mb_strpos($word, $exception) !== false) {
