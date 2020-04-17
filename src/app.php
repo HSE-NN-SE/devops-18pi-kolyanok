@@ -3,10 +3,10 @@
 /**
  * A small program for demonstrating the work the OffensiveAnalytics class
  *
- * @package                OffensiveAnalytics
- * @link                   https://kolynaok.ru/matan
- * @author                 kolyanok <nikolayokunkov@gmail.com>
- * @license                WTFPL - http://www.wtfpl.net/txt/copying/
+ * @package OffensiveAnalytics
+ * @author  kolyanok <nikolayokunkov@gmail.com>
+ * @link    https://kolynaok.ru/matan
+ * @license WTFPL - http://www.wtfpl.net/txt/copying/
  */
 
 require_once "OffensiveAnalytics.php";
@@ -22,7 +22,8 @@ while (false !== ($line = fgets(STDIN))) {
             echo $mat."\n";
         }
     }
-    else { echo "\n";
+    else { 
+    	echo "\n";
     }
     echo "Хуй и производные (".count($off[1]).")";
     if (count($off[1])) {
@@ -31,7 +32,8 @@ while (false !== ($line = fgets(STDIN))) {
             echo $mat."\n";
         }
     }
-    else { echo "\n";
+    else { 
+    	echo "\n";
     }
     echo "Ебать и производные (".count($off[2]).")";
     if (count($off[2])) {
@@ -40,7 +42,8 @@ while (false !== ($line = fgets(STDIN))) {
             echo $mat."\n";
         }
     }
-    else { echo "\n";
+    else { 
+    	echo "\n";
     }
     echo "Блядь и производные (".count($off[3]).")";
     if (count($off[3])) {
@@ -49,6 +52,7 @@ while (false !== ($line = fgets(STDIN))) {
             echo $mat."\n";
         }
     }
-    else { echo "\n";
+    else { 
+    	echo "\n";
     }
 }

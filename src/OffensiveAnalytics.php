@@ -3,17 +3,18 @@
 /** 
  * Сlass for the analysis of offensive vocabulary in Russian
  *
- * @package                OffensiveAnalytics
- * @link                   https://kolynaok.ru/matan
- * @author                 kolyanok <nikolayokunkov@gmail.com>
- * @license                WTFPL - http://www.wtfpl.net/txt/copying/
+ * @package OffensiveAnalytics
+ * @author  kolyanok <nikolayokunkov@gmail.com>
+ * @link    https://kolynaok.ru/matan
+ * @license WTFPL - http://www.wtfpl.net/txt/copying/
  */
 
 /**
  * OffensiveAnalytics class
  * Сlass for the analysis of offensive vocabulary in Russian
+ *
  * @package kolyanok/OffensiveAnalytics
- * @link https://kolynaok.ru/matan
+ * @link    https://kolynaok.ru/matan
  */
 declare(strict_types=1);
 
