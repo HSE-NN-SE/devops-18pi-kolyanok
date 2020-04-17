@@ -14,11 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Get the version
-      id: vars
-      run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag offensiveanalytics:${{steps.vars.outputs.tag}}
+      run: docker build . --file Dockerfile --tag offensiveanalytics:$
       
   test:
     
@@ -27,10 +24,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-      - name: Get the version
-        id: vars
-        run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
       - name: Run image
-        run: docker run offensiveanalytics:${{steps.vars.outputs.tag}}
+        run: docker run offensiveanalytics:$
       - name: Run tests
-        run: docker exec -it offensiveanalytics:${{steps.vars.outputs.tag}} sh tests/runtests.sh
+        run: docker exec -it offensiveanalytics:$ sh tests/runtests.sh
