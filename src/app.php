@@ -2,12 +2,11 @@
 
 /**
  * A small program for demonstrating the work the OffensiveAnalytics class
- * @app.php
- * OffensiveAnalytics app
- * @author    kolyanok <nikolayokunkov@gmail.com>
- * @package kolyanok/OffensiveAnalytics
- * @license WTFPL
- * @link https://kolynaok.ru/matan
+ *
+ * @package                OffensiveAnalytics
+ * @link                   https://kolynaok.ru/matan
+ * @author                 kolyanok <nikolayokunkov@gmail.com>
+ * @license                WTFPL - http://www.wtfpl.net/txt/copying/
  */
 
 require_once "OffensiveAnalytics.php";

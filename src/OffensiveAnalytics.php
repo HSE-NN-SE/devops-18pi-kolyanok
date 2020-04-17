@@ -2,11 +2,11 @@
 
 /** 
  * Сlass for the analysis of offensive vocabulary in Russian
- * @OffensiveAnalytics.php
- * @package                kolyanok/OffensiveAnalytics
+ *
+ * @package                OffensiveAnalytics
+ * @link                   https://kolynaok.ru/matan
  * @author                 kolyanok <nikolayokunkov@gmail.com>
  * @license                WTFPL - http://www.wtfpl.net/txt/copying/
- * @link                   https://kolynaok.ru/matan
  */
 
 /**
