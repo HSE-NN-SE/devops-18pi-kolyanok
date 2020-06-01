@@ -29,7 +29,7 @@ require_once "OffensiveAnalytics.php";
 $oa = new OffensiveAnalytics();
 echo "<p>Result:</p> ";
 if (isset($_POST["linput"])) {
-    $line = $_POST["linput"];	
+    $line = $_POST["linput"];    
     $off = $oa->getOffensive($line);
     echo "Пизда и производные (".count($off[0]).")";
     if (count($off[0])) {
