@@ -32,5 +32,5 @@ jobs:
         docker push kolyanok/offensiveanalyticsapp:latest
     - name: webhook
       run: curl -f https://xn--h1ambjb.xn--p1ai/webhook.php
-    - name: testifitworks
+    - name: Test if it works
       run: sleep 5 && curl -f kolyanok.ru:1234

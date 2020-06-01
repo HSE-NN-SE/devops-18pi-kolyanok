@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h2>OffensiveAnalytics Demo</h2>
+<h2>OffensiveAnalytics Demo (test)</h2>
 
 <form action="/index.php" method="POST">
   <textarea id="linput" name="linput"></textarea><br><br>
