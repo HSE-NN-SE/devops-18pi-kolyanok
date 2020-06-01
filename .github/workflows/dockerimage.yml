@@ -33,4 +33,4 @@ jobs:
     - name: webhook
       run: curl -f https://xn--h1ambjb.xn--p1ai/webhook.php
     - name: testifitworks
-      run: curl -f kolyanok.ru:1234
+      run: sleep 5 && curl -f kolyanok.ru:1234
