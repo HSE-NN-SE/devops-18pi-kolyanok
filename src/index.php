@@ -27,8 +27,9 @@
 require_once "OffensiveAnalytics.php";
 
 $oa = new OffensiveAnalytics();
-echo "Enter lines of text: ";
-while (false !== ($line = $_POST["linput"])) {
+echo "<p>Result:</p> ";
+if (isset($_POST["linput"])) {
+    $line = $_POST["linput"];	
     $off = $oa->getOffensive($line);
     echo "Пизда и производные (".count($off[0]).")";
     if (count($off[0])) {
@@ -48,7 +49,7 @@ while (false !== ($line = $_POST["linput"])) {
     } else {
         echo "<br />";
     }
-    echo "Ебать и производные (".count($off[2]).")";
+    echo "Блядь и производные (".count($off[2]).")";
     if (count($off[2])) {
         echo ": <br />";
         foreach ($off[2] as $mat) {
@@ -57,7 +58,7 @@ while (false !== ($line = $_POST["linput"])) {
     } else {
         echo "<br />";
     }
-    echo "Блядь и производные (".count($off[3]).")";
+    echo "Ебать и производные (".count($off[3]).")";
     if (count($off[3])) {
         echo ": <br />";
         foreach ($off[3] as $mat) {
