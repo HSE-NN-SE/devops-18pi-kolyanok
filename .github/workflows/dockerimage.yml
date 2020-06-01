@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master, feature/github_workflow ]
+    branches: [ master, kolyanok-webapp ]
   pull_request:
-    branches: [ master, feature/github_workflow ]
+    branches: [ master, kolyanok-webapp ]
 
 jobs:
 
