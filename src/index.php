@@ -7,7 +7,7 @@
 
 <h2>OffensiveAnalytics Demo</h2>
 
-<form action="/action_page.php">
+<form action="/index.php" method="POST">
   <textarea id="linput" name="linput"></textarea><br><br>
   <input type="submit" value="Submit">
 </form> 
@@ -28,7 +28,7 @@ require_once "OffensiveAnalytics.php";
 
 $oa = new OffensiveAnalytics();
 echo "Enter lines of text: ";
-while (false !== ($line = fgets(STDIN))) {
+while (false !== ($line = $_POST["linput"])) {
     $off = $oa->getOffensive($line);
     echo "Пизда и производные (".count($off[0]).")";
     if (count($off[0])) {
