@@ -35,7 +35,7 @@ while (false !== ($line = fgets(STDIN))) {
     } else {
         echo "\n";
     }
-    echo "Ебать и производные (".count($off[2]).")";
+    echo "Блядь и производные (".count($off[2]).")";
     if (count($off[2])) {
         echo ": \n";
         foreach ($off[2] as $mat) {
@@ -44,7 +44,7 @@ while (false !== ($line = fgets(STDIN))) {
     } else {
         echo "\n";
     }
-    echo "Блядь и производные (".count($off[3]).")";
+    echo "Ебать и производные (".count($off[3]).")";
     if (count($off[3])) {
         echo ": \n";
         foreach ($off[3] as $mat) {

@@ -1,4 +1,8 @@
-FROM offensiveanalytics
+FROM php:7.4-apache
 
-RUN php composer.phar update --no-dev
-CMD ["php", "src/app.php"]
+COPY . /var/www/html
+
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/src
+
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
